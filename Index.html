@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thư Viện Kinh Thánh</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#faf7f0;--card:#fffdf8;--line:#e6dfcf;--red:#7a2e1d;--blue:#1d4f91;--ink:#1d1b17;--mute:#7a7467;--hl:#fff1c2;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#17150f;--card:#201d15;--line:#3a3527;--red:#e0a08c;--blue:#8fb7ea;--ink:#efe9da;--mute:#a39c8a;--hl:#3a3319;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Cambria,Caladea,Georgia,serif}
+main{max-width:760px;margin:0 auto;padding:44px 16px 56px}
+h1{color:var(--red);text-align:center;font-size:1.9em;line-height:1.25;margin:0 0 4px}
+.lead{text-align:center;color:var(--mute);margin:0 0 24px}
+.sw{position:relative}
+.sb{display:flex;gap:8px}
+.sb input{flex:1;min-width:0;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px;min-height:48px}
+.sb button{font:inherit;font-weight:700;color:var(--card);background:var(--red);border:1px solid var(--red);border-radius:12px;padding:0 18px;min-height:48px;cursor:pointer}
+.sb input:focus-visible,.sb button:focus-visible,.lk:focus-visible,#sg a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+#sg{list-style:none;margin:6px 0 0;padding:6px;position:absolute;left:0;right:0;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:12px}
+#sg[hidden]{display:none}
+#sg a{display:block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none}
+#sg a b{color:var(--blue)}
+#sg a small{display:block;color:var(--mute)}
+#sg a.on,#sg a:hover{background:var(--hl)}
+h2{color:var(--red);border-bottom:2px solid var(--red);padding-bottom:4px;margin:36px 0 12px;font-size:1.35em}
+h2 small{font-size:.65em;font-weight:400;font-style:italic;color:var(--mute);margin-left:8px}
+.lk{display:block;margin:0 0 8px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--blue);font-weight:700;text-decoration:none}
+.lk:hover{border-color:var(--red)}
+.lk small{display:block;color:var(--mute);font-weight:400;font-size:.85em}
+@media(max-width:520px){h1{font-size:1.6em}}
+</style>
+</head>
+<body>
+<main>
+<h1>Thư Viện Kinh Thánh</h1>
+<p class="lead">Đọc, học hỏi và suy niệm Lời Chúa</p>
+
+<div class="sw">
+<div class="sb">
+<input id="q" type="search" autocomplete="off" aria-label="Tìm kiếm" placeholder="Tìm từ khoá hoặc câu Kinh Thánh, ví dụ: Gioan 3:16">
+<button id="go" type="button">Tìm</button>
+</div>
+<ul id="sg" hidden></ul>
+</div>
+
+<section>
+<h2>Holy Bible <small>Thánh Kinh</small></h2>
+<a class="lk" href="Kinh_Thanh.html">Kinh Thánh Việt – Anh<small>73 sách · Cựu Ước và Tân Ước · tìm kiếm từ khoá</small></a>
+</section>
+
+<section>
+<h2>Bible Study <small>Học hỏi Kinh Thánh</small></h2>
+<a class="lk" href="Cross_References.html">Cross References 1<small>Gioan 1:14 · Gioan 3:16 · Luca 24:32 — 221 tham chiếu</small></a>
+<a class="lk" href="Cross_References_2.html">Cross References 2<small>Luca 8:11-15 · Gioan 15:1-8 — 234 tham chiếu</small></a>
+<a class="lk" href="Gap_Ngoi_Loi.html">Gặp Ngôi Lời qua Kinh Thánh<small>Tài liệu chia sẻ dành cho Giáo lý viên và Giới trẻ Công giáo</small></a>
+</section>
+
+<section>
+<h2>Books <small>Sách</small></h2>
+<a class="lk" href="Nhan_Sinh.html">Kiếp Nhân Sinh<small>Đọc theo từng tập · tìm kiếm từ khoá</small></a>
+</section>
+</main>
+
+<script>
+(function(){
+var BK="sang-the-ky|Sáng Thế Ký|St|Genesis;xuat-hanh|Xuất Hành|Xh|Exodus;le-vi|Lêvi|Lv|Leviticus;dan-so|Dân Số|Ds|Numbers;de-nhi-luat|Đệ Nhị Luật|Đnl|Deuteronomy;gio-sue|Giô-suê|Gs|Joshua;thu-lanh|Thủ Lãnh|Tl|Judges;rut|Rút|R|Ruth;sa-mu-en-1|Sa-mu-en 1|1Sm|1 Samuel;sa-mu-en-2|Sa-mu-en 2|2Sm|2 Samuel;vua-1|Vua 1|1V|1 Kings;vua-2|Vua 2|2V|2 Kings;su-bien-nien-1|Sử Biên Niên 1|1Sb|1 Chronicles;su-bien-nien-2|Sử Biên Niên 2|2Sb|2 Chronicles;et-ra|Ét-ra|Er|Ezra;no-khe-mi-a|Nơ-khe-mi-a|Nkm|Nehemiah;to-bi-a|Tô-bi-a|Tb|;giu-di-tha|Giu-đi-tha|Gdt|;et-te|Ét-te|Et|Esther;ma-ca-be-1|Ma-ca-bê 1|1Mcb|;ma-ca-be-2|Ma-ca-bê 2|2Mcb|;giop|Gióp|G|Job;thanh-vinh|Thánh Vịnh|Tv|Psalms;cham-ngon|Châm Ngôn|Cn|Proverbs;giang-vien|Giảng Viên|Gv|Ecclesiastes;diem-ca|Diễm Ca|Dc|Song of Songs;khon-ngoan|Khôn Ngoan|Kn|;huan-ca|Huấn Ca|Hc|;isaia|I-sai-a|Is|Isaiah;gie-re-mi-a|Giê-rê-mi-a|Gr|Jeremiah;ai-ca|Ai Ca|Ac|Lamentations;ba-ruc|Ba-rúc|Br|;e-de-ki-en|Ê-dê-ki-en|Ed|Ezekiel;da-ni-en|Đa-ni-en|Đn|Daniel;ho-se|Hô-sê|Hs|Hosea;gio-en|Giô-en|Ge|Joel;a-mot|A-mốt|Am|Amos;o-va-di-a|Ô-va-đi-a|Ôv|Obadiah;gio-na|Giô-na|Gn|Jonah;mi-kha|Mi-kha|Mk|Micah;na-khum|Na-khum|Nk|Nahum;kha-ba-cuc|Kha-ba-cúc|Hc|Habakkuk;xo-pho-ni-a|Xô-phô-ni-a|Xp|Zephaniah;khac-gai|Khác-gai|Kg|Haggai;da-ca-ri-a|Da-ca-ri-a|Dcr|Zechariah;ma-la-khi|Ma-la-khi|Ml|Malachi;mat-theu|Mátthêu|Mt|Matthew;mac-co|Máccô|Mc|Mark;lu-ca|Luca|Lc|Luke;gio-an|Gioan|Ga|John;cong-vu|Tông Đồ Công Vụ|Cv|Acts;thu-roma|Thư Rôma|Rm|Romans;thu-corinto-1|Thư Côrintô 1|1Cr|1 Corinthians;thu-corinto-2|Thư Côrintô 2|2Cr|2 Corinthians;thu-galat|Thư Galát|Gl|Galatians;thu-ephes|Thư Êphêsô|Ep|Ephesians;thu-philippe|Thư Philípphê|Pl|Philippians;thu-colosse|Thư Côlôxê|Cl|Colossians;thu-thessalonica-1|Thư Thêxalônica 1|1Tx|1 Thessalonians;thu-thessalonica-2|Thư Thêxalônica 2|2Tx|2 Thessalonians;thu-timothe-1|Thư Timôthê 1|1Tm|1 Timothy;thu-timothe-2|Thư Timôthê 2|2Tm|2 Timothy;thu-tito|Thư Titô|Tt|Titus;thu-philemon|Thư Philêmon|Plm|Philemon;thu-dothai|Thư Dothái|Dt|Hebrews;thu-giacobe|Thư Giacôbê|Gc|James;thu-phero-1|Thư Phêrô 1|1Pr|1 Peter;thu-phero-2|Thư Phêrô 2|2Pr|2 Peter;thu-gioan-1|Thư Gioan 1|1Ga|1 John;thu-gioan-2|Thư Gioan 2|2Ga|2 John;thu-gioan-3|Thư Gioan 3|3Ga|3 John;thu-giuda|Thư Giuđa|Gđ|Jude;khai-huyen|Khải Huyền|Kh|Revelation".split(';').map(function(s){var a=s.split('|');return{id:a[0],n:a[1],ab:a[2],en:a[3]||''}});
+var PG=[
+{t:'Kinh Thánh Việt – Anh',s:'Holy Bible',u:'Kinh_Thanh.html',k:'holy bible kinh thanh thanh kinh'},
+{t:'Cross References 1',s:'Gioan 1:14 · Gioan 3:16 · Luca 24:32',u:'Cross_References.html',k:'bible study hoc hoi cross references tham chieu gioan 1:14 gioan 3:16 luca 24:32'},
+{t:'Cross References 2',s:'Luca 8:11-15 · Gioan 15:1-8',u:'Cross_References_2.html',k:'bible study hoc hoi cross references tham chieu luca 8:11-15 gioan 15:1-8'},
+{t:'Gặp Ngôi Lời qua Kinh Thánh',s:'Bible Study',u:'Gap_Ngoi_Loi.html',k:'bible study hoc hoi gap ngoi loi'},
+{t:'Kiếp Nhân Sinh',s:'Books',u:'Nhan_Sinh.html',k:'books sach kiep nhan sinh'}
+];
+var q=document.getElementById('q'),sg=document.getElementById('sg'),go=document.getElementById('go'),cur=-1;
+function nz(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d')}
+function key(s){return nz(s).replace(/[^a-z0-9]/g,'')}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+BK.forEach(function(b){b.k=[key(b.n),key(b.ab),key(b.en)].filter(Boolean)});
+function book(k,loose){
+  if(!k)return null;
+  for(var i=0;i<BK.length;i++)if(BK[i].k.indexOf(k)>-1)return BK[i];
+  if(loose&&k.length>=3)for(var j=0;j<BK.length;j++)if(BK[j].k.some(function(x){return x.indexOf(k)===0}))return BK[j];
+  return null;
+}
+function ref(s){
+  var b=book(key(s),false);
+  if(b)return{b:b,c:'',v:''};
+  var m=s.trim().match(/^(.*?)[\s.]*?(\d+)(?:\s*[:,.]\s*(\d+))?(?:\s*[-–]\s*\d+)?$/);
+  if(!m)return null;
+  b=book(key(m[1]),true);
+  return b?{b:b,c:m[2],v:m[3]||''}:null;
+}
+function items(s){
+  var out=[],r=ref(s),n=nz(s).split(/\s+/).filter(Boolean);
+  if(r){
+    var lab=r.b.n+(r.c?' '+r.c+(r.v?':'+r.v:''):'');
+    out.push({t:lab,s:'Mở trong Kinh Thánh',u:'Kinh_Thanh.html#/'+r.b.id+(r.c?'/'+r.c+(r.v?'/'+r.v:''):'')});
+  }
+  if(s.trim().length>1)PG.forEach(function(p){
+    var h=nz(p.t+' '+p.k);
+    if(n.every(function(x){return h.indexOf(x)>-1}))out.push(p);
+  });
+  var e=encodeURIComponent(s.trim());
+  out.push({t:'Tìm “'+s.trim()+'” trong Kinh Thánh',s:'Toàn bộ Kinh Thánh, Việt và Anh',u:'Kinh_Thanh.html#/tim/'+e});
+  out.push({t:'Tìm “'+s.trim()+'” trong Kiếp Nhân Sinh',s:'Toàn bộ các tập',u:'Nhan_Sinh.html#/tim/'+e});
+  return out;
+}
+function render(){
+  var s=q.value;cur=-1;
+  if(!s.trim()){sg.hidden=true;sg.innerHTML='';return}
+  sg.innerHTML=items(s).map(function(i){return '<li><a href="'+esc(i.u)+'"><b>'+esc(i.t)+'</b><small>'+esc(i.s)+'</small></a></li>'}).join('');
+  sg.hidden=false;
+}
+function mark(d){
+  var a=sg.querySelectorAll('a');
+  if(!a.length)return;
+  if(cur>-1)a[cur].classList.remove('on');
+  cur=(cur+d+a.length)%a.length;
+  a[cur].classList.add('on');
+}
+function submit(){
+  if(!q.value.trim())return;
+  var a=sg.querySelectorAll('a');
+  if(!a.length)render();
+  a=sg.querySelectorAll('a');
+  location.href=a[cur>-1?cur:0].getAttribute('href');
+}
+q.addEventListener('input',render);
+q.addEventListener('focus',render);
+q.addEventListener('keydown',function(e){
+  if(e.key==='ArrowDown'){e.preventDefault();mark(1)}
+  else if(e.key==='ArrowUp'){e.preventDefault();mark(-1)}
+  else if(e.key==='Enter'){e.preventDefault();submit()}
+  else if(e.key==='Escape'){sg.hidden=true}
+});
+go.addEventListener('click',submit);
+document.addEventListener('click',function(e){if(!e.target.closest('.sw'))sg.hidden=true});
+})();
+</script>
+</body>
+</html>
